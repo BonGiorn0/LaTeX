@@ -1,0 +1,180 @@
+\documentclass[12pt]{extarticle}
+\usepackage{tempora}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, ukrainian]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{tikz}
+\graphicspath{{/home/artem/Pictures}}
+\geometry
+{
+    a4paper,
+    left=30mm,
+    top=15mm,
+    right=20mm,
+    bottom=15mm,
+}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \textbf{\normalsize{\MakeUppercase{
+            Міністерство Освіти і науки України
+            Національний університет "Львівська політехніка"
+        }}}
+
+        \begin{flushright}
+        \textbf{ІКНІ}\\
+        Кафедра \textbf{ПЗ}
+        \end{flushright}
+        \vspace{15mm}
+
+        \includegraphics[width=0.4\textwidth]{lpnu_logo.png}
+
+        \vspace*{\fill}
+
+        \textbf{\normalsize{\MakeUppercase{Звіт}}}
+            
+        До розрахункової роботи №2
+
+        \textbf{на тему:} “Подання чисел в комп’ютері”
+
+        \textbf{з дисципліни:} “Архітектура комп’ютера”
+            
+        \vspace*{\fill}
+
+        \begin{flushright}
+
+            %\textbf{Лектор:}\\
+            %доцент кафедри ПЗ\\
+            %Крук О.Г.\\
+            %\vspace{12pt}
+
+            \textbf{Виконав:}\\
+            студент групи ПЗ-24\\
+            Губик А. С.\\
+            \vspace{12pt}
+
+            %\textbf{Прийняв:}\\
+            %доцент кафедри ПЗ\\
+            %Задорожний І. М.\\
+        \vspace{12pt}
+        \end{flushright}
+
+        Львів -- 2023
+            
+            
+    \end{center}
+\end{titlepage}
+
+\vspace{12pt}
+
+\subsection*{Індивідуальне завдання}
+
+\begin{center}
+    \begin{tabular}{| c | c | c | c |}
+    \hline
+    Варіант & a & b & c\\
+    \hline
+    3 & 171 & -101 & -161.49707031250\\
+    \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{Хід роботи}
+\paragraph{1.}
+Переведемо число \textit{a} в двійкову систему:
+
+$171 = 128 + 32 + 8 + 2 + 1$
+
+$171 = 2^7 + 2^5 + 2^3 + 2^1 + 2^0$
+\vspace*{12pt}
+
+Тоді ми маємо встановити одиницею біти 7, 5, 3, 1 і 0:
+
+$171_{10} = 0000000010101011_2 = 00AB_{16}$
+
+\paragraph{2.}
+Переведемо число \textit{b} 
+в двійкову систему, для початку зробим це з його значенням по модулю:
+
+$101 = 64 + 32 + 4 + 1$
+
+$101 = 2^6 + 2^5 + 2^2 + 2^0$
+\vspace*{12pt}
+
+Тоді ми маємо встановити одиницею біти 6, 5, 2 і 0:
+
+ $101_{10} = 0000000001100101_2$
+
+\vspace*{12pt}
+Інвертуємо біти і додаємо одиницю:
+
+$-101_{10} = 1111111110011011_2 = FF9B_{16}$
+
+
+\paragraph{3.}
+Додамо a i b:
+\begin{center}
+    +
+    \begin{tabular}{ c }
+    0000000010101011\\
+    1111111110011011\\
+    \hline
+    0000000001000110\\
+    \end{tabular}
+\end{center}
+
+$0000000001000110_2 = 2^6 + 2^2 + 2^1$
+
+$0000000001000110_2 = 70_{10}$
+
+
+\paragraph{4.}
+Переведемо число \textit{с} в двійкову сисетму, 
+для початку знайдемо двійкове представлення модуля цілої частини:
+
+$161 = 2^7 + 2^5 + 2^0$
+
+$161_{10} = 0000000010100001_2$
+
+\vspace{12pt}
+Потім дробової:
+\begin{center}
+    \begin{tabular}{ c | l c}
+    0 & 74707031250 & x 2\\
+    1 & 494140625 & x 2\\
+    0 & 98828125 & x 2\\
+    1 & 9765625 & x 2\\
+    1 & 953125 & x 2\\
+    1 & 90625 & x 2\\
+    1 & 8125 & x 2\\
+    0 & 625 & x 2\\
+    1 & 25 & x 2\\
+    0 & 5 & x 2\\
+    1 & 0
+    \end{tabular}
+\end{center}
+
+$0,74707031250_{10} = 0,1011111101_2$
+\vspace{12pt}
+
+Обчислимо мантису:
+
+$E = 127 + 7 = 134 = 10000110$
+
+\vspace{12pt}
+Додамо нулів в кінець щоб було 32 біти і тоді кінцевий результат буде:
+
+                        %1 10000110 01000011011111101000000
+$-161,74707031250_{10} = 1 10000110 01000011011111101000000_2 = C321BF40_{16}$
+
+\subsection*{Висновок}
+
+Я навчився переводити цілі числа і числа з рухомою комою з десяткової
+системи числення в двійкову та шістнадцяткову, та навпаки.
+\end{document}

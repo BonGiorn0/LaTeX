@@ -1,0 +1,32 @@
+\babel@toc {ukrainian}{}\relax 
+\contentsline {section}{\numberline {1}Завдання до курсової роботи}{3}{}%
+\contentsline {section}{\numberline {2}Алгоритм розв‘язку задачі у покроковому представленні}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Сортування доріг за протяжністю (Sort by Length -- SBL)}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Знайти найкоротшу дорогу, де найбільша кількість смуг. (Shortest road most lanes -- SRML)}{5}{}%
+\contentsline {subsection}{\numberline {2.3}Знайти всі дороги, в яких наявні розділювачі посередині, кількість смуг >2 та згрупувати за типом. (A Complex One -- ACO)}{6}{}%
+\contentsline {subsection}{\numberline {2.4}Визначити тип автомобільних доріг, з найбільшою протяжністю та наявністю пішохідних доріжок. (Heighest length and pavement -- HLP)}{7}{}%
+\contentsline {subsection}{\numberline {2.5}Визначити автомобільні дороги з найбільшою кількістю смуг та наявними пішохідними доріжками які належать до регіональних.(Regional most lane and pavement -- RMLP)}{7}{}%
+\contentsline {section}{\numberline {3}Діаграми UML класів, прецедентів, послідовності виконання.}{8}{}%
+\contentsline {section}{\numberline {4}Код розробленої програми з коментарями}{11}{}%
+\contentsline {subsection}{\numberline {4.1}Road.cs:}{11}{}%
+\contentsline {subsection}{\numberline {4.2}MainWindow.cs:}{12}{}%
+\contentsline {subsection}{\numberline {4.3}MainWindow.axaml:}{12}{}%
+\contentsline {subsection}{\numberline {4.4}MainWindowViewModel.cs:}{13}{}%
+\contentsline {subsection}{\numberline {4.5}ViewModelBase.cs:}{23}{}%
+\contentsline {subsection}{\numberline {4.6}Program.cs:}{23}{}%
+\contentsline {subsection}{\numberline {4.7}ViewLocator.cs:}{24}{}%
+\contentsline {subsection}{\numberline {4.8}App.axaml.cs:}{24}{}%
+\contentsline {subsection}{\numberline {4.9}App.axaml:}{25}{}%
+\contentsline {section}{\numberline {5}Протокол роботи програми для кожного пункту завдання}{26}{}%
+\contentsline {section}{\numberline {6}Інструкція користувача та системні вимоги}{30}{}%
+\contentsline {subsection}{\numberline {6.1}Встановлення ПЗ}{30}{}%
+\contentsline {subsection}{\numberline {6.2}Налаштування ПЗ}{31}{}%
+\contentsline {subsection}{\numberline {6.3}Посібник Користувача Додатку Менеджер Доріг}{31}{}%
+\contentsline {section}{\numberline {7}Опис виняткових ситуацій}{32}{}%
+\contentsline {subsection}{\numberline {7.1}FileNameException}{32}{}%
+\contentsline {subsection}{\numberline {7.2}NameException}{33}{}%
+\contentsline {subsection}{\numberline {7.3}LengthException}{33}{}%
+\contentsline {subsection}{\numberline {7.4}LaneCountException}{34}{}%
+\contentsline {section}{\numberline {8}Структура файлу вхідних даних}{34}{}%
+\contentsline {section}{\numberline {9}Висновки}{35}{}%
+\contentsline {section}{\numberline {10}Списки використаних джерел}{36}{}%

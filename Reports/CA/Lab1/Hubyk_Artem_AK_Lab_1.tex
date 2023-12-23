@@ -1,0 +1,300 @@
+\documentclass[12pt]{extarticle}
+\usepackage{tempora}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, ukrainian]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\graphicspath{{/home/artem/Pictures}}
+\geometry
+{
+    a4paper,
+    left=30mm,
+    top=15mm,
+    right=20mm,
+    bottom=15mm,
+}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \textbf{\normalsize{\MakeUppercase{
+            Міністерство Освіти і науки України
+            Національний університет "Львівська політехніка"
+        }}}
+
+        \begin{flushright}
+        \textbf{ІКНІ}\\
+        Кафедра \textbf{ПЗ}
+        \end{flushright}
+        \vspace{15mm}
+
+        \includegraphics[width=0.4\textwidth]{lpnu_logo.png}
+
+        \vspace*{\fill}
+
+        \textbf{\normalsize{\MakeUppercase{Звіт}}}
+            
+        До лабораторної роботи №1
+
+        \textbf{на тему:} “Синтез та моделювання 
+        шифраторів і дешифраторів та 
+        мультиплексорів і демультиплексорів у системі Proteus”
+
+        \textbf{з дисципліни:} “Архітектура комп’ютера”
+            
+        \vspace*{\fill}
+
+        \begin{flushright}
+
+            \textbf{Лектор:}\\
+            доцент кафедри ПЗ\\
+            Крук О.Г.\\
+            \vspace{12pt}
+
+            \textbf{Виконав:}\\
+            студент групи ПЗ-24\\
+            Губик А. С.\\
+            \vspace{12pt}
+
+            \textbf{Прийняв:}\\
+            доцент кафедри ПЗ\\
+            Задорожний І. М.\\
+        \vspace{12pt}
+        \end{flushright}
+
+        Львів -- 2022
+            
+            
+    \end{center}
+\end{titlepage}
+
+\subsection*{Тема роботи} 
+Синтез та моделювання шифраторів і 
+дешифраторів та мультиплексорів і демультиплексорів у системі Proteus
+
+\vspace{12pt}
+
+\subsection*{Мета роботи} 
+Закріпити практичні навики 
+моделювання логічних схем в середовищі системи програм Proteus; поглибити знання про основні типи комбінаційних схем: шифратори, дешифратори, мультиплексори і демультиплексори; опанувати їх синтез; дослідити роботу синтезованих схем в системі програм Proteus
+
+\subsection*{Індивідуальне завдання}
+\begin{center}
+    \begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c |}
+    \hline
+    \multirow{3}{*}{N} 
+    & a0/z0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 &
+    \multirow{3}{*}{$f_0$, KГц} & 
+    \multirow{3}{*}{Пріоритет} \\
+    \cline{2-10}
+    & a1/z1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & &\\
+    \cline{2-10}
+    & a2/z2 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & &\\
+    \hline
+    3 &  & 0 & 0 & $d_0$ & $d_1$ & $d_2$ & $d_3$ & $d_4$ & 0 &
+    7 &
+    $F_7, F_4, F_1, F_2, F_3, F_6, F_5 $ \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{Теоретичні відомості}
+Логічний елемент (вентиль) – це електронне коло в інтегральному виконанні, 
+яке складається переважно з діодів та транзисторів різного типу і реалізує
+ одну з елементарних логічних операцій. Логічна операція називається
+  елементарною, якщо вона описується булевою функцією одного або двох
+   аргументів.
+    
+Три наступні логічні елементи реалізують основні логічні операції,
+ визначені аксіомами алгебри логіки, і відповідно називаються основними 
+ або базовими: інвертор (НЕ/NOT), диз’юнктор (АБО/OR), кон’юнктор (І/AND). Вони утворюють функціонально повну систему, оскільки 
+  дозволяють реалізувати довільну логічну функцію будь-якої складності.
+
+  Логічні елементи, крім, 
+  звичайно, інвертора, можуть мати до восьми входів. 
+  Найбільш наочно кожний логічний елемент описується таблицею 
+  істинності або відповідності, яка охоплює всі можливі комбінації 
+  вхідних сигналів і відповідні значення на виході. 
+
+  Кожен логічний елемент має свою назву і стандартне умовне 
+  графічне позначення, на якому вхід/входи завжди розміщені зліва, 
+  а вихід/виходи – справа.
+
+На практиці широкого поширення набули й інші логічні елементи, 
+які ще називають комбінаційними, оскільки кожен з них реалізує 
+декілька основних логічних операцій: виняткове АБО (XOR), елемент 
+еквівалентності (XNOR), елемент Пірса (АБО-НЕ/NOR), елемент Шеффера 
+(І-НЕ/NAND).
+
+З принципу двоїстості слідує, що в логічних виразах, які задають будь-яку логічну функцію, 
+можна обійтись лише двома типами основних операцій, а саме: АБО та НЕ або ж
+ І та НЕ. Таким чином, сукупність логічних елементів АБО та НЕ і аналогічно
+  сукупність логічних елементів І та НЕ є функціонально повними системами. 
+  На практиці доцільніше замість логічних елементів АБО та НЕ 
+  використовувати елемент Пірса, що поєднує їх операції. З тих же
+ міркувань замість логічних елементів І та НЕ використовують елемент Шеффера. 
+
+\subsection*{Хід роботи}
+\paragraph{1.}
+
+За індивідуальним завдання пріоритети: $F_3, F_7, F_2, F_4, F_1, F_6, F_5$ 
+
+Вирази для проміжних змінних пріоритетного шифратора:
+
+$H_7=F_7$
+
+$H_4=\neg F_7\land F_4 $
+
+$H_1=\neg F_7\land F_4\land F_1 $
+
+$H_2=\neg F_7\land F_4\land F_1\land F_2 $
+
+$H_3=\neg F_7\land F_4\land F_1\land F_2\land F_3 $
+
+$H_6=\neg F_7\land \neg F_4\land \neg F_1\land \neg 
+            F_2\land \neg F_3\land F_6 $
+
+$H_5=\neg F_7\land \neg F_4\land \neg F_1\land \neg 
+            F_2\land \neg F_3\land \neg F_6\land F_5 $
+
+\vspace{12pt}
+Вихідні сигнали пріоритетного шифратора:
+
+$X_0=H_1 \land H_3 \land H_5 \land H_7 $
+
+$X_1=H_2 \land H_3 \land H_6 \land H_7  $
+
+$X_2=H_4 \land H_5 \land H_6 \land H_7 $
+
+\vspace{12pt}
+Період цифрового сигналу:
+
+T = 1/f = 1/7000 = 142.8 мкc
+
+\vspace{12pt}
+Ширина елементарного імпульсу:
+
+t = Т / 8 = 142.8 / 8 = 17.9 мкс
+
+\vspace{12pt}
+Схема шифратора і його графік:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{coder.jpg}
+    \caption{Шифратор}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{coder_graph.jpg}
+    \caption{Графік}
+\end{figure}
+
+\paragraph{2.}
+
+Рівняння виходів дешифратора:
+
+$V_0 = \neg z_2 \land \neg z_1 \land \neg z_0$
+
+$V_1 = \neg z_2 \land \neg z_1 \land z_0$
+
+$V_2 = \neg z_2 \land z_1 \land \neg z_0$
+
+$V_3 = \neg z_2 \land z_1 \land z_0$
+
+$V_4 = z_2 \land \neg z_1 \land \neg z_0$
+
+$V_5 = z_2 \land \neg z_1 \land z_0$
+
+$V_6 = z_2 \land z_1 \neg \land z_0$
+
+$V_7 = z_2 \land z_1 \land z_0$
+
+\vspace{12pt}
+Частоти сигналів:
+
+$Z_0 = 4*f_0 = 4*7000=28000 кГц $
+
+$Z_1 = 2*f_0 = 2*7000=14000 кГц $
+
+$Z_2 = 1*f_0 = 1*7000=7000 кГц $
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{encoder.jpg}
+    \caption{Дешифратор}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{encoder_graph.jpg}
+    \caption{Графік}
+\end{figure}
+
+\vspace{12pt}
+\paragraph{3.}
+Вихідний сигнал D у ДДНФ мультиплексора:
+
+$F = (\neg A0 \land A1 \land \neg A2 \land D0) \lor
+    (\neg A0 \land A1 \land A2 \land D1) \lor
+    (\neg A0 \land A1 \land A2 \land D2) \lor \break \lor
+    (A0 \land \neg A1 \land A2 \land D3) \lor
+    (A0 \land A1 \land \neg A2 \land D4)$
+
+Ширина елементарного імпульсу мультиплексора:
+
+T/64 = 17.9/8 = 2.28 мкс
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{multiplexer.jpg}
+    \caption{Мультиплексор}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{multiplexer_graph.jpg}
+    \caption{Графік}
+\end{figure}
+\begin{center}
+    \begin{tabular}{| c | c | c | c | c | c | c | c | c |}
+    \hline
+    a0 & a1 & a2 & x0 & x1 & x2 & x3 & x4 & D \\
+    \hline
+    0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & x0\\
+    0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & x1\\
+    1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & x2\\
+    1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & x3\\
+    1 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & x4\\
+    \hline
+    \end{tabular}
+\end{center}
+\paragraph{4.}
+Рівняння до кожного з входів демультиплексора:
+
+$Y_0 = \neg A_0 \land A_1 \land \neg A_2 \land D$
+
+$Y_1 = \neg A_0 \land A_1 \land A_2 \land D$
+
+$Y_2 = A_0 \land \neg A_1 \land \neg A_2 \land D$
+
+$Y_3 = A_0 \land \neg A_1 \land A_2  \land D$
+
+$Y_4 = A_0 \land \neg A_1 \land A_2 \land D$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{demultiplexer.jpg}
+    \caption{Демультиплексор}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{demultiplexer_graph.jpg}
+    \caption{Графік}
+\end{figure}
+
+\subsection*{Виснок}
+Я розібрався як працювати в Proteus, що таке шифратор, мультиплексор і обернені до них схеми.
+
+
+\end{document}

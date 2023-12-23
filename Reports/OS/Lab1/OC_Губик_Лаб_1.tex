@@ -1,0 +1,306 @@
+\documentclass[12pt]{extarticle}
+\usepackage{tempora}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, ukrainian]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\graphicspath{{/home/artem/Pictures}}
+\geometry
+{
+    a4paper,
+    left=30mm,
+    top=15mm,
+    right=20mm,
+    bottom=15mm,
+}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \textbf{\normalsize{\MakeUppercase{
+            Міністерство Освіти і науки України
+            Національний університет "Львівська політехніка"
+        }}}
+
+        \begin{flushright}
+        \textbf{ІКНІ}\\
+        Кафедра \textbf{ПЗ}
+        \end{flushright}
+        \vspace{15mm}
+
+        \includegraphics[width=0.4\textwidth]{lpnu_logo.png}
+
+        \vspace*{\fill}
+
+        \textbf{\normalsize{\MakeUppercase{Звіт}}}
+            
+        До лабораторної роботи №1
+
+        \textbf{на тему:} “Ознайомлення та керування процесами
+         в операційних системах для персонального комп'ютера.”
+
+        \textbf{з дисципліни:} “Операційні системи”
+            
+        \vspace*{\fill}
+
+        \begin{flushright}
+
+            \textbf{Лектор:}\\
+            старший викладач кафедри ПЗ\\
+            Грицай О.В.\\
+            \vspace{12pt}
+
+            \textbf{Виконав:}\\
+            студент групи ПЗ-24\\
+            Губик А. С.\\
+            \vspace{12pt}
+
+            \textbf{Прийняв:}\\
+            доцент кафедри ПЗ\\
+            Горечко О. М.\\
+        \vspace{12pt}
+        \end{flushright}
+
+        Львів -- 2023
+            
+            
+    \end{center}
+\end{titlepage}
+
+\textbf{Тема роботи:} Ознайомлення та керування процесами в операційних системах для
+персонального комп’ютера. Windows.
+\vspace{12pt}
+
+\textbf{Мета роботи:} Ознайомитися з процесами та потоками в операційній системі
+Windows. Навчитися працювати із системними утилітами, що дають
+можливість отримувати інформацію про процеси, потоки, використовувану
+ними пам'ять, та іншу необхідну інформацію.
+
+\subsection*{Теоретичні відомості}
+Термін “Операційна система” охоплює багато визначень та функцій.
+Частково, це через велику різноманітність комп'ютерних систем, які
+нероздільно пов'язані з операційними системами. Основною метою
+комп'ютерних систем є виконання програм та полегшення вирішення проблем
+користувачів. Комп'ютерна техніка побудована для досягнення цієї мети.
+Оскільки саме обладнання не є простим у використанні, розробляються
+прикладні програми. Ці програми вимагають певних типових операцій, таких
+як керування пристроями вводу-виводу. Потім загальні функції контролю та
+розподілу ресурсів об’єднуються в одне програмне забезпечення: операційну
+систему. Отже, першим визначенням операційної системи можна вважати:
+Операційна система - це сукупність програм, які призначені для
+керування ресурсами комп'ютера й обчислювальними процесами, а також для
+організації взаємодії користувача з апаратурою.
+З іншої сторони, немає загального визначення, що є складовою частиною
+операційної системи. Операційна система може містити ті, чи інші функції,
+залежно від призначення і виду різних комп'ютерних систем. Тому,
+найпоширенішим визначенням є:
+Операційна система - це програма, яка постійно працює на комп'ютері і,
+зазвичай, називається ядром.
+Поряд з ядром існують ще два типи програм: системні програми, які
+пов'язані з операційною системою, але не обов'язково є частиною ядра, та
+прикладні програми, що включають усі програми, не пов'язані з роботою
+системи.
+
+\subsection*{Хід роботи}
+
+
+\paragraph{1.}
+За допомогою утиліти «Диспетчер задач» та Process Explorer отримати
+повну інформацію про процеси
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{task_manager.jpg}
+    \caption{Task Manager Screenshot}
+\end{figure}
+
+\paragraph{2.}
+За допомогою утиліти Process Explorer отримати додаткову інформацію
+про процеси та їхні потоки.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{process_exp.jpg}
+    \caption{Process Explorer Screenshot}
+\end{figure}
+
+\paragraph{3.}
+Задати
+відповідність виконання процесів на окремих ядрах центрального процесора;
+виконати завершення процесу
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{hollow1.jpg}
+    \caption{Звичайний стан процесора}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{hollow2.jpg}
+    \caption{Стaн процесора після запуску Hollow Knight}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{hollow3.jpg}
+    \caption{Стaн процесора після того, 
+        як Hollow Knight виділили ядра від CPU5 по CPU9}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\textwidth]{kill.jpg}
+    \caption{Завершуємо процес}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\textwidth]{prior.jpg}
+    \caption{Виствляємо процес}
+\end{figure}
+
+\paragraph{4.}
+Використовуючи Process Explorer призупинити процес і відновити його
+роботу.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\textwidth]{suspend.jpg}
+    \caption{Призупиняємо Edge}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\textwidth]{resume.jpg}
+    \caption{Відновлюємо роботу Edge}
+\end{figure}
+
+\paragraph{5.}
+Скомпілювати файл main.cpp представлений нижче і запустити
+виконуваний файл на різній кількості активних процесорів (ядер). Знайти для
+даної програми величини $A, S, p$ при різних вхідних значеннях величини $n$.
+
+\vspace{12pt}
+
+Зробимо по 3 заміри на різній кількості ядер: на одному ядрі, шести і дванадцяти
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core0_1.jpg}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core0_2.jpg}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core0_3.jpg}
+    \caption{}
+\end{figure}
+
+В сеедньому виходить 2123 ms на одному ядрі, назвемо це число $T_1$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core6_1.jpg}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core6_2.jpg}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core6_3.jpg}
+    \caption{}
+\end{figure}
+
+В сеедньому виходить 1111 ms на шести ядраx, назвемо це число $T_6$.
+
+Визначимо реальне прискорення $A$ для цього випадку, за формулою 
+\vspace{12pt}
+
+$A = \frac{T_1}{T_6}$
+
+Результатом буде 1.910
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core12_1.jpg}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core12_2.jpg}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core12_3.jpg}
+    \caption{}
+\end{figure}
+
+В сеедньому виходить 212 ms на дванадцяти ядраx, назвемо це число $T_{12}$
+
+Визначимо реальне прискорення $A$ для цього випадку, за формулою 
+\vspace{12pt}
+
+$A = \frac{T_1}{T_{12}}$
+
+Результатом буде 10.014
+\vspace{12pt}
+
+Далі ми визначимо $p$:
+
+$A = \frac{1}{p + \frac{1-p}{n}}$
+
+\vspace{12pt}
+
+$\frac{1}{A} = p + \frac{1-p}{n}$
+
+\vspace{12pt}
+
+$\frac{n}{A} = np + 1 - p$
+
+\vspace{12pt}
+
+$\frac{n}{A} = p(n-1) + 1$
+
+\vspace{12pt}
+
+$p = \frac{n}{A(n-1)} - 1$
+
+\vspace{12pt}
+
+Для шести ядер: $p = 0.37$
+
+Для дванадцяти ядер: $p = 0.9$
+
+\vspace{12pt}
+
+Тоді $S$ для шести ядер: $S = 2.1$
+
+Тоді $S$ для дванадцяти ядер: $S = 1.1$
+
+\paragraph{6.}
+Дослідити вплив зміни відповідності ядру на швидкодію процесу.
+
+Варіант 2: стискання файлу
+
+\vspace{12pt}
+
+\vspace{12pt}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{zip12.jpg}
+    \caption{7zip що працює на 12 ядрах}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{zip1.jpg}
+    \caption{7zip що працює на 1 ядрі}
+\end{figure}
+\textbf{Висновок:} Я навчився змінювати параметри процесів та керувати ними в ОС Windows.
+\end{document}

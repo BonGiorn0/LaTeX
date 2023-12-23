@@ -1,0 +1,271 @@
+\documentclass[12pt]{extarticle}
+\usepackage{tempora}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, ukrainian]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\graphicspath{{/home/artem/Pictures}}
+\geometry
+{
+    a4paper,
+    left=30mm,
+    top=15mm,
+    right=20mm,
+    bottom=15mm,
+}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \textbf{\normalsize{\MakeUppercase{
+            Міністерство Освіти і науки України
+            Національний університет "Львівська політехніка"
+        }}}
+
+        \begin{flushright}
+        \textbf{ІКНІ}\\
+        Кафедра \textbf{ПЗ}
+        \end{flushright}
+        \vspace{15mm}
+
+        \includegraphics[width=0.4\textwidth]{lpnu_logo.png}
+
+        \vspace*{\fill}
+
+        \textbf{\normalsize{\MakeUppercase{Звіт}}}
+            
+        До лабораторної роботи №2
+
+        \textbf{на тему:} “Ознайомлення та керування процесами
+         в операційних системах для персонального комп'ютера. Linux та macOS”
+
+        \textbf{з дисципліни:} “Операційні системи”
+            
+        \vspace*{\fill}
+
+        \begin{flushright}
+
+            \textbf{Лектор:}\\
+            старший викладач кафедри ПЗ\\
+            Грицай О.Д.\\
+            \vspace{12pt}
+
+            \textbf{Виконав:}\\
+            студент групи ПЗ-24\\
+            Губик А. С.\\
+            \vspace{12pt}
+
+            \textbf{Прийняв:}\\
+            доцент кафедри ПЗ\\
+            Горечко О. М.\\
+        \vspace{12pt}
+        \end{flushright}
+
+        Львів -- 2023
+            
+            
+    \end{center}
+\end{titlepage}
+
+\textbf{Тема роботи:} Ознайомлення та керування процесами в операційних системах для
+персонального комп’ютера. Linux та macOS.
+\vspace{12pt}
+
+\textbf{Мета роботи:} Ознайомитися з процесами та потоками в операційних системах
+Linux, MacOS. Навчитися працювати із системними утилітами, що дають
+можливість отримувати інформацію про процеси, потоки, використовувану
+ними пам'ять, та іншу необхідну інформацію.
+
+\subsection*{Теоретичні відомості}
+Операційна система - це сукупність програм, які призначені для
+керування ресурсами комп'ютера й обчислювальними процесами, а також для
+організації взаємодії користувача з апаратурою. З іншої сторони, Операційна
+система - це програма, яка постійно працює на комп'ютері і, зазвичай,
+називається ядром.
+Функції операційних систем можна взагальному описати, як:
+Керування та розподіл ресурсів
+Керування обчислювальними процесами.
+Забезпечення взаємодії користувача з апаратурою
+Класифікація операційних систем здійснюється відносно різних
+характеристик:
+а будовою ядра: монолітні, мікроядерні, наноядерні;
+за кількістю розрядів даних, що обробляються одночасно: 8-, 16-,
+32-, 64-розрядні;
+за кількістю програм, що виконуються одночасно: однозадачні,
+багатозадачні;
+за цільовим пристроєм: для мейнфреймів, для ПК, для мобільних
+пристроїв;
+за типом інтерфейсу: з текстовим інтерфейсом, з графічним
+інтерфейсом;
+за кількістю користувачів: однокористувацькі, багатокористувацькі;
+за типом використання ресурсів: локальні, мережеві;
+за призначенням: для пакетної обробки, інтерактивні, підтримка
+реального часу;
+за типом ліцензії: комерційна, вільна;
+за сімейством: Microsoft Windows, Unix-подібні ОС, Mac OS X
+та інші.
+
+\subsection*{Хід роботи}
+
+
+\paragraph{1.}
+Встановити операційні системи Linux та MacOS
+
+\vspace{12pt}
+Я встановив Linux поряд з Windows(dual boot).
+\paragraph{2.}
+За допомого консольних засобів ОС Linux отримати повну інформацію
+про процеси.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.80\textwidth]{htop.png}
+    \caption{htop}
+\end{figure}
+
+\paragraph{3.}
+а допомогою утиліт top, htop, qps, System Monitor отримати повну
+інформацію про процеси в ОС Linux та MacOS.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{top.png}
+    \caption{top}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{qps.png}
+    \caption{qps}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{gnome_sys_mon.png}
+    \caption{GNOME System Monitor}
+\end{figure}
+
+\paragraph{4.}
+Використовуючи консольні засоби ОС Linux та утиліти змінити
+пріоритет виконання процесу.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{prior.png}
+    \caption{Виставляємо пріорітет в System Monitor}
+\end{figure}
+
+\break
+\paragraph{5.}
+Використовуючи консольні засоби ОС Linux та сторонні утиліти
+змінити стан виконання процесу, завершити виконання заданого процесу.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{end_task.png}
+    \caption{Відновлюємо роботу Edge}
+\end{figure}
+
+\vspace{12pt}
+
+\paragraph{6.}
+Скомпілювати файл main.cpp представлений у лабораторній роботі No 1
+(на MacOS і Linux можна командою: g++ main.cpp -pthread) і запустити
+виконуваний файл на різній кількості активних процесорів (ядер). Знайти для
+даної програми величини , , при різних вхідних значеннях величини .A S p n
+Порівняти результати для різних операційних систем.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core1.png}
+    \caption{}
+\end{figure}
+В сеедньому виходить 925 ms на одному ядрі, назвемо це число $T_1$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core6.png}
+    \caption{}
+\end{figure}
+В сеедньому виходить 282 ms на шести ядраx, назвемо це число $T_6$.
+
+Визначимо реальне прискорення $A$ для цього випадку, за формулою 
+\vspace{12pt}
+
+$A = \frac{T_1}{T_6}$
+
+Результатом буде 3.28
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{core12.png}
+    \caption{}
+\end{figure}
+В середньому виходить 214 ms на дванадцяти ядраx, назвемо це число $T_{12}$
+
+Визначимо реальне прискорення $A$ для цього випадку, за формулою 
+\vspace{12pt}
+
+$A = \frac{T_1}{T_{12}}$
+
+Результатом буде 4.32
+\vspace{12pt}
+
+Далі ми визначимо $p$:
+
+$A = \frac{1}{p + \frac{1-p}{n}}$
+
+\vspace{12pt}
+
+$\frac{1}{A} = p + \frac{1-p}{n}$
+
+\vspace{12pt}
+
+$\frac{n}{A} = np + 1 - p$
+
+\vspace{12pt}
+
+$\frac{n}{A} = p(n-1) + 1$
+
+\vspace{12pt}
+
+$p = \frac{n}{A(n-1)} - 1$
+
+\vspace{12pt}
+
+Для шести ядер: $p = 0.63$
+
+Для дванадцяти ядер: $p = 0.75$
+
+\vspace{12pt}
+
+Тоді $S$ для шести ядер: $S = 1.44$
+
+Тоді $S$ для дванадцяти ядер: $S = 1.29$
+
+\paragraph{7.} Результати лабораторної роботи оформити у звіт, у висновку надати
+порівняння моніторингу процесів у різних системах різними утилітами,
+відповідно до індивідуального варіанту.
+
+Варіант 3: копіювання файлів за допомогою cp
+
+\vspace{12pt}
+
+\vspace{12pt}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{cp_htop.png}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{cp_gnome.png}
+    \caption{}
+\end{figure}
+\textbf{Висновок:} Я навчився змінювати параметри процесів та керувати ними в ОС Linux. Щодо 
+завдання 6, можемо бачити що лінукс працює швидше на меншій кількості ядер, він 
+працює на 6 ядрах так як віндовс на 12, але при збільшенні ядер до 12 прискорення майже не відбувається.
+Можна сказати що лінукс розпаралелює програми більш ефективно.
+\end{document}
